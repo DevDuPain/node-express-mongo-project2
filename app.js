@@ -10,6 +10,17 @@ passportStrategy(passport)
 //load routes
 import auth from './routes/auth'
 
+//load keys
+import keys from './config/keys'
+
+//mongoose connect
+mongoose.connect(keys.mongoURI, {
+  useMongoClient:true
+})
+  .then(() => console.log('MongoDB Connected'))
+  .catch(err => console.log(err));
+
+  
 const app = express();
 
 app.get('/', (req, res) => {
