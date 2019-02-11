@@ -15,12 +15,12 @@ import keys from './config/keys'
 
 //mongoose connect
 mongoose.connect(keys.mongoURI, {
-  useMongoClient:true
+  useNewUrlParser: true
 })
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.log(err));
 
-  
+
 const app = express();
 
 app.get('/', (req, res) => {
