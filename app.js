@@ -13,12 +13,12 @@ import auth from './routes/auth'
 //load keys
 import keys from './config/keys'
 
-//mongoose connect
-mongoose.connect(keys.mongoURI, {
-  useNewUrlParser: true
-})
-  .then(() => console.log('MongoDB Connected'))
-  .catch(err => console.log(err));
+// //mongoose connect
+// mongoose.connect(keys.mongoURI, {
+//   useNewUrlParser: true
+// })
+//   .then(() => console.log('MongoDB Connected'))
+//   .catch(err => console.log(err));
 
 const app = express();
 
