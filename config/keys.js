@@ -3,9 +3,9 @@ let keys = null;
  if(process.env.NODE_ENV === 'production'){
    keys = {
      //assigning from heroku global config variables
-    mongoURI:PROCESS.ENV.MONGO_URI,
-    googleClientID:PROCESS.ENV.GOOGLE_CLIENT_ID,
-    googleClientSecret:PROCESS.ENV.GOOGLE_CLIENT_SECRET,
+    mongoURI:process.env.MONGO_URI,
+    googleClientID:process.env.GOOGLE_CLIENT_ID,
+    googleClientSecret:process.env.GOOGLE_CLIENT_SECRET
   }
 }else{
   //assigning from gitignored local file
