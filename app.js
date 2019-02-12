@@ -3,6 +3,9 @@ import mongoose from 'mongoose';
 import passport from 'passport';
 
 
+//laod user model
+import User from './models/User'
+
 // Passport Config
 import passportStrategy from './config/passport'
 passportStrategy(passport)
@@ -13,12 +16,12 @@ import auth from './routes/auth'
 //load keys
 import keys from './config/keys'
 
-// //mongoose connect
-// mongoose.connect(keys.mongoURI, {
-//   useNewUrlParser: true
-// })
-//   .then(() => console.log('MongoDB Connected'))
-//   .catch(err => console.log(err));
+//mongoose connect
+mongoose.connect(keys.mongoURI, {
+  useNewUrlParser: true
+})
+  .then(() => console.log('MongoDB Connected'))
+  .catch(err => console.log(err));
 
 const app = express();
 
